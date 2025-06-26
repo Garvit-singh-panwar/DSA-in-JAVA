@@ -12,7 +12,7 @@ public class CharacterPattern {
         // 2. BC    2 characters
         // 3. DEF   3 characters
         // 4. GHIJ  4 characters
-
+        // here the character is alphabets A to Z 
 
 
 
