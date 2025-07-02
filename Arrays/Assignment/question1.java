@@ -1,5 +1,7 @@
 package Assignment;
 
+import java.util.Arrays;
+
 // Question 1. GIven an integer array nums.
 //  return true if any value appears at least twice in the array  
 // and return false if every elements is distinct
@@ -15,14 +17,23 @@ package Assignment;
 
 public class question1 {
 
+   // In this method, we first sort the array.
+    // Sorting means putting the numbers in order like 1,1,2,3.
+    // means arranging them in order (ascending or descending order)
+    // After sorting, if any number is repeated, it will be next to each other.
+    // So, we just check if nums[i] is equal to nums[i+1].
+    // If we find two same numbers next to each other, return true.
+    // If we reach the end and find no same numbers, return false.
+    
+
     public static boolean appearTwice(int[] nums){
-        for(int i = 0 ; i< nums.length ; i++){
-            for(int j = i+1 ; j< nums.length ; j++ ){
-                if(nums[i] == nums[j]){
-                    return true;
-                }
+        Arrays.sort(nums);
+        for(int i = 0 ; i< nums.length-2 ; i++ ){
+            if(nums[i] == nums[i+1]){
+                return true;
             }
         }
+
         return false;
     }
 
