@@ -74,6 +74,26 @@ public class notes{
         // - Each day has 5 tracked hours of sales
         // So the data structure is: [week][day][hour]
 
-        sc.close();
+
+        // How array data is stored in memory
+
+        // There are two common ways of storing 2D arrays in memory:
+        // 1. Row-Major Order   -> This means elements are stored row by row. First the 1st row, then 2nd row, and so on.
+        // 2. Column-Major Order -> This means elements are stored column by column. First the 1st column, then 2nd, and so on.
+
+        // But in Java, things work a bit differently.
+        // Java doesn't store 2D arrays in a flat memory block like C/C++.
+
+        // In Java:
+        // When you write int[][] arr = new int[3][4];
+        // -> Java first creates a 1D array of references (of size 3 in this case) -> this is the first dimension: arr[0], arr[1], arr[2]
+        // Then it creates 3 separate 1D arrays of size 4 (the second dimension)
+        // Finally, each reference in the main array points to one of these 1D arrays.
+
+        // So essentially, Java stores an **array of arrays**.
+        // Each element of the first array holds the **reference/address** to another 1D array.
+
+
+         sc.close();
     }
 }
