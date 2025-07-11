@@ -16,6 +16,7 @@ public class clearIthBit {
     }
     public static void main(String[] args) {
         
+      System.out.println(clearIthBIt(10, 3));
 
     }
 
