@@ -1,12 +1,25 @@
 public class ClearLastIBits {
 
-    // here what we want to do  
-    // we want to make all the bits up to ith post 0
-    // so have to do and operation fo num with 0 up to its ith pos after that all bits should be 1
-    // so when we do 0 & 0 it will give 0 and  0 &1  also give 1
-    // and when we do 1 & 1 it will give 1 and when we do 1 & 0 it will give 0
+  // Goal: Clear (set to 0) all bits below the i-th position in a number.
+// 
+// To do this, we need a mask that has 0s in the lower i bits 
+// and 1s in all the higher bits. When we perform an AND operation:
+// - 0 & 0 = 0     (clears the bit)
+// - 1 & 0 = 0     (clears the bit)
+// - 1 & 1 = 1     (preserves the bit)
+//
+// How to create the mask:
+// - Start with -1 (which is all 1s in binary)
+// - Left shift it by i positions: (-1 << i)
+//   This shifts i zeros into the lower bits, resulting in:
+//   111...111000...000  <- i zeros on the right
+//
+// Then, AND the number with this mask:
+//   num & (-1 << i)
+//
+// This will clear all bits from position 0 up to (but not including) i.
 
-    // so to make all the bit up to i 0
+
 
     public static int clearLastIBits(int num , int i)
     {
