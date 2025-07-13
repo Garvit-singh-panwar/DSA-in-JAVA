@@ -12,7 +12,7 @@ public class FastExpo {
 // 2. We'll iterate through each bit of the power:
 //    - If the current bit is 1 → we multiply the result with the current base.
 //    - Then, we square the base (because we're moving to the next power of 2).
-//    - We right shift the power to move to the next bit.
+//    - We right shift the power to move to the next bit
 
 // 3. We repeat this until the power becomes 0.
 
