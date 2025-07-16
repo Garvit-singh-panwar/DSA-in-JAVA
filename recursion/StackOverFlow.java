@@ -7,3 +7,9 @@
 // This situation is called a **stack overflow**, and it leads to a runtime error.
 
 // In such cases, the stack can become dangerous for the program’s stability.
+
+// That's why it's essential to always define a proper base case in recursion.
+
+//If there's no base case to stop the recursion, the stack keeps growing.
+// Eventually, this leads to a stack overflow error, crashing the program.
+
