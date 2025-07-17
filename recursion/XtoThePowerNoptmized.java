@@ -12,12 +12,13 @@ public class XtoThePowerNoptmized {
             return 1;
         }
 
-        if(n%2 == 0){
-            return xToThePowerN(x, n/2)*xToThePowerN(x, n/2);
+        int halfPower = xToThePowerN(x, n/2);
+        
+        if(n%2 != 0){
+            return x * halfPower * halfPower;
         }
-        else{
-            return x*xToThePowerN(x, n/2)*xToThePowerN(x, n/2);
-        }
+
+        return halfPower * halfPower;
 
     }
 
