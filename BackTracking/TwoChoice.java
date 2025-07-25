@@ -1,5 +1,7 @@
 package BackTracking;
 
+  
+
 public class TwoChoice {
 
 // This function prints all the subsequences (substrings formed by skipping or including characters)
@@ -16,6 +18,12 @@ public class TwoChoice {
 // This process continues recursively for all characters until we reach the base case
 // (i == str.length()), at which point we print the current 'ans'.
 
+
+// The time complexity of this is o(n*2^n);
+// why because we have n character and every character have 2 choices 
+// 1 char have 2^1 choice two character have 2^2 co n character have 2^n choice 
+// and we have to check this n times 
+// thats why the time complexity is n*2^n 
 
     public static void subString(String str , String ans , int i){
         // Base case : if we have reached at the end of the string 
