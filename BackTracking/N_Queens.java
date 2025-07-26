@@ -94,7 +94,10 @@ public class N_Queens {
 
         n_QueenS(board , 0);
 
-
+        // the time complexity of n_queens is nFactorial
+        
+        // why because in first row we have n choices to place a queen but when we go to to the next row we have (n-1) to place 
+        // n*(n-1)*(n-2)...  thats how the time complexity is n!   
 
     }
 
