@@ -73,18 +73,20 @@ class stackLL{
         return this.head.data;
     }
 
-    // using this function we are adding a new node in the bottom of the stack 
-    // we are using the recursive approach 
-    // we store head in the temp  variable every time then delete the head and do it until the head become null 
-    // then in the we add data in the head 
-    // and then add all the previous elements in it recursively 
-    // using temp 
+    
     public void addInBottom(int data){
         
      head = addInBottom_helper(data);
 
     }
 
+    
+    // using this function we are adding a new node in the bottom of the stack 
+    // we are using the recursive approach 
+    // we store head in the temp  variable every time then delete the head and do it until the head become null 
+    // then in the we add data in the head 
+    // and then add all the previous elements in it recursively 
+    // using temp 
     public Node addInBottom_helper(int data){
         if(head == null){
             this.push(data);
